@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Sayıyı yazıya çevirme</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>  
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="sayi_yaz.js"></script>
+  <script src="app_sayiyaz.js"></script>
+</head>
+<body>
+  <div class="container">
+  <h2>Sayıyı yazıya çevirme</h2>
+    <hr>
+    <form>
+      <div class="row">
+	  <div class="two columns">Sayıyı giriniz: </div>
+	  <div class="ten columns"><input type="text" id="sayı" value="123" size="30"> &nbsp;&nbsp;
+					<input class="button-primary" type="button" id="yaz" value="Yaz"></div>
+      </div>
+      <div class="row">
+        <div class="two columns">Yazılışı: </div>
+	<div class="ten columns"><textarea id="çıktı" cols="40" placeholder="..."></textarea></div>
+      </div>
+    </form>   
+   </div>
+
+</body>
+</html>
