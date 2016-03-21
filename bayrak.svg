@@ -10,7 +10,7 @@
 <!-- yıldız -->
   <polygon id="yıldız" style="fill-rule: nonzero; stroke: white; fill: white"/>
  </g>
-<script><![CDATA[
+<script type="application/ecmascript"><![CDATA[
   var Bayrak = {
     en: 200,
     çiz: function(en) {
