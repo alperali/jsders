@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" id="bayrak" onload="Bayrak.çiz()">
+<svg xmlns="http://www.w3.org/2000/svg" id="bayrak" onload="yükle()">
  <g transform="translate(3,3)">
   <rect id="uçkur" style="fill: white; stroke: gray" />
   <rect id="gövde" style="fill: red; stroke: red" />
@@ -11,13 +11,21 @@
   <polygon id="yıldız" style="fill-rule: nonzero; stroke: white; fill: white"/>
  </g>
 <script type="application/ecmascript"><![CDATA[
+  
+  function yükle() {
+    if (parent.document.constructor.name == "HTMLDocument") // bir HTML içindeyse export et
+      parent.Bayrak = Bayrak;
+      
+    Bayrak.çiz();
+  }
+  
   var Bayrak = {
     en: 200,
     çiz: function(en) {
       var el, i;
   
       if (en == undefined) en=this.en;
-	  else this.en = en;
+      else this.en = en;
   
       el = document.getElementById("uçkur");
       el.setAttribute("x", 0);
