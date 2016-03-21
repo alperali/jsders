@@ -17,6 +17,7 @@
       var el, i;
   
       if (en == undefined) en=this.en;
+	  else this.en = en;
   
       el = document.getElementById("uçkur");
       el.setAttribute("x", 0);
