@@ -3,10 +3,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" id="bayrak" onload="Bayrak.çiz()">
  <g transform="translate(3,3)">
   <rect id="uçkur" style="fill: white; stroke: gray" />
-  <rect id="gövde" style="fill: red; stroke: red" />
+  <rect id="gövde" style="fill: rgb(127,21,44); stroke: rgb(127,21,44)" />
 <!-- hilal -->
   <circle id="dış" style="fill: white; stroke: white" />
-  <circle id="iç" style="fill: red; stroke: red" />
+  <circle id="iç" style="fill: rgb(127,21,44); stroke: rgb(127,21,44)" />
 <!-- yıldız -->
   <polygon id="yıldız" style="fill-rule: nonzero; stroke: white; fill: white"/>
  </g>
