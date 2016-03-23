@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" id="bayrak" onload="yükle()">
- <g transform="translate(3,3)">
+ <g id="grp">
   <rect id="uçkur" style="fill: white; stroke: gray" />
   <rect id="gövde" style="fill: rgb(127,21,44); stroke: rgb(127,21,44)" />
 <!-- hilal -->
   <circle id="dış" style="fill: white; stroke: white" />
   <circle id="iç" style="fill: rgb(127,21,44); stroke: rgb(127,21,44)" />
 <!-- yıldız -->
-  <polygon id="yıldız" style="fill-rule: nonzero; stroke: white; fill: white"/>
+  <polygon id="yıldız" style="fill-rule: nonzero; stroke: white; fill: white" />
  </g>
 <script type="application/ecmascript"><![CDATA[
-  
   function yükle() {
-    if (parent.document.constructor.name == "HTMLDocument") // bir HTML içindeyse export et
-      parent.Bayrak = Bayrak;
-      
+    var poz, param;
+    
     Bayrak.çiz();
+    document.getElementById("grp").setAttribute("transform", Bayrak.gtrans);
+    
+    if (parent.document.constructor.name == "HTMLDocument") { // bir HTML doc içindeyse,
+      parent.Bayrak = Bayrak;  // export et   
+      // <object> parametresi varsa işle
+      if (document.defaultView.frameElement.getElementsByTagName("param").length) {
+        param = document.defaultView.frameElement.getElementsByTagName("param")[0];
+        if (param.getAttribute("name") == "poz" && param.getAttribute("value") == "düşey")
+          Bayrak.çevir(Bayrak.DŞY);
+      }
+    }
+    else // gömülü değilse, yıldıza tıklandığında çevirsin
+      document.getElementById("yıldız").onclick = function() { Bayrak.çevir(); };
+    
   }
   
   var Bayrak = {
     en: 200,
+    gtrans: "translate(3,3)",
+    
     çiz: function(en) {
       var el, i;
   
@@ -60,6 +74,27 @@
       el.setAttribute("points", noktalar);
   
       document.getElementById("bayrak").setAttribute("viewBox","0 0 " + (en/30 + 1 + en*1.5 + 6) + " " + (en + 6));
+    },
+    
+    YTY: 0,
+    DŞY: 90,
+    yön: 0,
+    çevir: function (yön) {
+      var fark;
+      if (yön == this.yön) return;
+      if (yön == undefined)
+        yön = (this.yön == this.DŞY ? this.YTY : this.DŞY);
+        
+      document.getElementById("grp").setAttribute("transform",  
+          " rotate(" + yön + ", " + ((this.en/30 + 1 + this.en*1.5)/2) + ", " + this.en/2 + ") " + this.gtrans);
+      this.yön = yön;
+
+      fark = (this.en/30 + 1 + this.en*1.5 - this.en) / 2;
+      if (yön == this.DŞY)
+         document.getElementById("bayrak").setAttribute("viewBox", (fark-6) + " " + (-fark) + " " + (this.en + 6) + " " + (this.en/30 + 1 + this.en*1.5 + 6));
+      else
+         document.getElementById("bayrak").setAttribute("viewBox","0 0 " + (this.en/30 + 1 + this.en*1.5 + 6) + " " + (this.en + 6));
+
     }
   }
 ]]>
