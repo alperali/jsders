@@ -35,7 +35,7 @@ function sayı_yaz(sayı)
       sonuç =  boy + " " + N[b] + " " + sonuç;
   }
   
-  if (sonuç.startsWith("bir bin"))
+  if (sonuç.substr(0, 7) == "bir bin")
     return sonuç.substr(4);
   else if (sonuç == "")
     return "sıfır";
