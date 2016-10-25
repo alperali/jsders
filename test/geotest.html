@@ -2,19 +2,19 @@
 <html>
 <head></head>
 <body>
-<p id="test">Geo Test</p>
+<p>Geo Test</p>
+<p id="succ"></p><p id="err"></p>
 
 <script>
 navigator.geolocation.getCurrentPosition(
 	function(pos) {
-		document.write("<p>Success. Lat: "+pos.coords.latitude+", Lon: "+pos.coords.longitude+"</p>");
+		document.getElementById("succ").innerHTML = "Success. Lat: "+pos.coords.latitude+", Lon: "+pos.coords.longitude;
 	},
 	function(poserr) {
-		console.log("geo error.");
 		if (poserr.code == poserr.TIMEOUT) 
-			document.write("<p>Error. Timeout.</p>")
+			document.getElementById("err").innerHTML = "Error. Timeout.";
 		else
-			document.write("<p>Error. Other.</p>");
+			document.getElementById("err").innerHTML = "Error. Other.";
 	},
 	{timeout: 4000});
 </script>
