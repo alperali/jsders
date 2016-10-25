@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<p id="test">Geo Test</p>
+
+<script>
+navigator.geolocation.getCurrentPosition(
+	function(pos) {
+		document.write("<p>Success. Lat: "+pos.coords.latitude+", Lon: "+pos.coords.longitude+"</p>");
+	},
+	function(poserr) {
+		console.log("geo error.");
+		if (poserr.code == poserr.TIMEOUT) 
+			document.write("<p>Error. Timeout.</p>")
+		else
+			document.write("<p>Error. Other.</p>");
+	},
+	{timeout: 4000});
+</script>
+
+</body>
+</html> 
