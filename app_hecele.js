@@ -18,6 +18,7 @@ window.addEventListener("load", function() {
         { ptrn: /^[aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 3 },
         
         { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9][aeiouöüıİ]/i,  uzn: 2 },
+        { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][aeiouöüıİ0-9]/i,  uzn: 2 },
         { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9][aeiouöüıİ])/i,  uzn: 3 },
         { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 4 },
         { ptrn: /^[^aeiouöüıİ0-9][^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 4 }          
@@ -33,10 +34,10 @@ window.addEventListener("load", function() {
 
         return klme; // hiç match yok, olduğu gibi döndür
     }
-	
-	document.forms[0].onsubmit = function () {
-		document.getElementById("hcl-btn").click();
-		return false;
-	}
+    
+    document.forms[0].onsubmit = function () {
+        document.getElementById("hcl-btn").click();
+        return false;
+    }
 
 });
