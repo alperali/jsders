@@ -4,7 +4,7 @@ il
 ol
 on
 at
-
+---------------
 i-liş-kin
 a-ra-sın-dan
 e-di-len
@@ -18,41 +18,46 @@ em-ri-nin
 alt-lık
 alt
 ilk
-============================
+====================================
 
 şu
 ve
 bu
-
+---------------
 ve-rir
- ma-hi-ye-ti-ne
- sa-ğır
- ta-ra-fın-dan
- ta-li-mat
+ma-hi-ye-ti-ne
+sa-ğır
+ta-ra-fın-dan
+ta-li-mat
+
+sa-at
+fi-il
+ka-i-de
+me-sa-i
  
- bil-gi
- müş-te-ri
- ger-çek-leş-ti-ril-me-si-ne
- sağ-lam
- kal
- bit
- son
+bil-gi
+müş-te-ri
+ger-çek-leş-ti-ril-me-si-ne
+sağ-lam
+kal
+bit
+son
  
- borç-lan-mak
- fark-lı-laş-tır
- borç
- fark
+borç-lan-mak
+fark-lı-laş-tır
+borç
+fark
  
 Trak-ya
- prog-ram-cı
- spor
- spor-a
- spor-cu
- tren
- tren-e
- kral-lık
- kral-a
- kral-i-çe 
+prog-ram-cı
+spor
+spor-a
+spor-cu
+tren
+tren-e
+kral-lık
+kral-a
+kral-i-çe 
 */
 
 
@@ -69,6 +74,7 @@ function hecele(klme)
     { ptrn: /^[aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 3 },
     
     { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9][aeiouöüıİ]/i,  uzn: 2 },
+    { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][aeiouöüıİ0-9]/i,  uzn: 2 },
     { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9][aeiouöüıİ])/i,  uzn: 3 },
     { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 4 },
     { ptrn: /^[^aeiouöüıİ0-9][^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 4 }          
