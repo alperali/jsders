@@ -32,6 +32,11 @@ window.addEventListener("load", function() {
                     return klme;
 
         return klme; // hiç match yok, olduğu gibi döndür
-    }  
+    }
+	
+	document.forms[0].onsubmit = function () {
+		document.getElementById("hcl-btn").click();
+		return false;
+	}
 
 });
