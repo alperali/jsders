@@ -64,24 +64,25 @@ function hecele(klme)
     return klme;
   
   const hc = [
-	{ ptrn: /^[aeiouöüıİ][^aeiouöüıİ0-9][aeiouöüıİ]/i,  uzn: 1 },
-	{ ptrn: /^[aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9][aeiouöüıİ]/i,  uzn: 2 },
-	{ ptrn: /^[aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 3 },
+    { ptrn: /^[aeiouöüıİ][^aeiouöüıİ0-9][aeiouöüıİ]/i,  uzn: 1 },
+    { ptrn: /^[aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9][aeiouöüıİ]/i,  uzn: 2 },
+    { ptrn: /^[aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 3 },
     
-	{ ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9][aeiouöüıİ]/i,  uzn: 2 },
-	{ ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9][aeiouöüıİ])/i,  uzn: 3 },
-	{ ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 4 },
-	{ ptrn: /^[^aeiouöüıİ0-9][^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 4 }		    
+    { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9][aeiouöüıİ]/i,  uzn: 2 },
+    { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9][aeiouöüıİ])/i,  uzn: 3 },
+    { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 4 },
+    { ptrn: /^[^aeiouöüıİ0-9][^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 4 }          
   ];
   
-  	var i = -1;
+    var i = -1;
     while (++i < hc.length) 
-		if (hc[i].ptrn.test(klme))
-			if (klme.length > hc[i].uzn)
-				return klme.substr(0, hc[i].uzn) + "-" + hecele(klme.substr(hc[i].uzn));
-			else
-				return klme;
+        if (hc[i].ptrn.test(klme))
+            if (klme.length > hc[i].uzn)
+                return klme.substr(0, hc[i].uzn) + "-" + hecele(klme.substr(hc[i].uzn));
+            else
+                return klme;
 
+    return klme; // hiç match yok, olduğu gibi döndür
 }
 
 
