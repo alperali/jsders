@@ -74,7 +74,7 @@ function hecele(klme)
     { ptrn: /^[aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 3 },
     
     { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9][aeiouöüıİ]/i,  uzn: 2 },
-    { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][aeiouöüıİ0-9]/i,  uzn: 2 },
+    { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][aeiouöüıİ]/i,  uzn: 2 },
     { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9][aeiouöüıİ])/i,  uzn: 3 },
     { ptrn: /^[^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 4 },
     { ptrn: /^[^aeiouöüıİ0-9][^aeiouöüıİ0-9][aeiouöüıİ][^aeiouöüıİ0-9]($|[^aeiouöüıİ0-9])/i,  uzn: 4 }          
