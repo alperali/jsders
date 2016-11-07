@@ -2,6 +2,11 @@ window.addEventListener("load", başla);
 
 function başla() {
   document.getElementById("yaz").onclick = hesapla;
+  
+  document.forms[0].onsubmit = function () {
+    document.getElementById("yaz").click();
+    return false;
+  }
 }
 
 function hesapla() {
