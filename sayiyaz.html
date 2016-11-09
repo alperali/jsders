@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-  <meta charset="utf-8">
-  <title>Sayıyı yazıya çevirme</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>  
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <script src="sayi_yaz.js"></script>
-  <script src="app_sayiyaz.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sayıyı yazıya çevirme</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="sayi_yaz.js"></script>
+    <script src="app_sayiyaz.js"></script>
+  </head>
+
 <body>
-  <div class="container">
-  <h2>Sayıyı yazıya çevirme</h2>
-    <hr>
-    <form>
-      <div class="row">
-        <div class="two columns">Sayıyı giriniz: </div>
-        <div class="ten columns"><input type="text" id="sayı" value="123" size="30"> &nbsp;&nbsp;
-            <input class="button-primary" type="button" id="yaz" value="Yaz"></div>
-        </div>
-      <div class="row">
-        <div class="two columns">Yazılışı: </div>
-        <div class="ten columns"><textarea id="çıktı" cols="40" placeholder="..."></textarea></div>
-      </div>
-    </form>   
-   </div>
+<div class="container">
+  <div class="page-header text-center">
+	<h1>Sayıyı yazıya çevirme</h1>
+  </div>
+  <form class="form-horizontal">
+	<div class="form-group">
+		<label for="sayı" class="col-xs-2 control-label">Sayı:</label>
+		<div class="col-xs-10 col-md-9">
+          <input type="text" class="form-control" id="sayı" value="123" placeholder="rakamla sayı girin.">
+        </div>	
+	</div>
+	<div class="form-group">
+		<div class="col-xs-12 col-md-10 col-md-offset-1">
+		  <div class="input-group">
+			<span class="input-group-btn">
+				<button type="button" class="btn btn-primary" id="yaz">Yaz</button>
+			</span>
+			<p class="form-control-static bg-warning" id="çıktı"> </p>
+		  </div>
+		</div>
+	</div>	
+  </form>   
+</div>
 
 </body>
 </html>
