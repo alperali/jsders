@@ -14,9 +14,9 @@ function hesapla() {
   var e;
   
   try {
-	document.getElementById("çıktı").innerHTML = "&nbsp; " + sayı_yaz(sayı);
+	document.getElementById("çıktı").innerHTML = sayı_yaz(sayı);
   }
   catch(e) {
-    document.getElementById("çıktı").innerHTML = "&nbsp; " + e.message;
+    document.getElementById("çıktı").innerHTML = e.message;
   }
 }

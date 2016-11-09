@@ -4,7 +4,7 @@ window.addEventListener("load", function() {
         if (/[^a-zşğçöüİı]/i.test(klme))
             document.getElementById("heceli").innerHTML = "Sadece harflerden oluşan bir kelime girin."
         else
-            document.getElementById("heceli").innerHTML = "&nbsp; " + hecele(klme);
+            document.getElementById("heceli").innerHTML = hecele(klme);
     }
 
     function hecele(klme) {
