@@ -1,0 +1,9 @@
+.gi-lg {
+	font-size: 3ex; }
+.flip-yatay {
+	transform: scale(-1, 1);
+}
+
+.daktilo {
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}

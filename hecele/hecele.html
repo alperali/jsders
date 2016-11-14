@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Türkçe Heceleme</title>
+	<!-- link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<!-- link href='https://fonts.googleapis.com/css?family=Courgette&amp;subset=latin-ext' rel="stylesheet" -->
+	<!-- link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" -->	
+	<link href="custom.css" rel="stylesheet">
+	<script src="app.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+		<div class="page-header text-center">
+			<h1>Türkçe Heceleme</h1>
+		</div>
+		<div class="row">
+			<div class="col-xs-3 col-md-2 col-md-offset-2">
+				<input type="radio" name="yasla" id="sola-yasla" checked>
+					<label for="sola-yasla"><span class="glyphicon glyphicon-align-left gi-lg" aria-hidden="true"></span></label>
+			</div>
+			<div class="col-xs-3 col-md-2">
+				<input type="radio" name="yasla" id="tam-yasla">
+					<label for="tam-yasla"><span class="glyphicon glyphicon-align-justify gi-lg" aria-hidden="true"></span></label>
+			</div>
+			<div class="col-xs-3  col-md-2">
+				<input type="radio" name="yasla" id="hecele">
+					<label for="hecele"><span class="glyphicon glyphicon-list gi-lg flip-yatay" aria-hidden="true"></span></label>
+			</div>
+			<div class="col-xs-3 col-md-2">
+				<input type="text" id="str-uzn" size="4" value="50">
+				<button type="button" id="btn-hecele" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-ok-circle gi-lg" aria-hidden="true"></span></button>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+				<hr><p class="lead daktilo" id="metin"></p>
+			</div>
+	</div><!-- /.container -->
+  </body>
+</html>
