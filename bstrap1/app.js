@@ -24,4 +24,6 @@ window.addEventListener("load", function() {
 		}
 		
 	});
+	
+	document.getElementById("resm").click();  // ilk açılış Türkçe olsun
 });
