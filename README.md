@@ -1,4 +1,5 @@
 Burada çeşitli Javascript (ve Html, CSS) çalışmaları vardır. Bazılarının [Youtube](https://www.youtube.com/channel/UCP6i78PIaV5FkcT3arK44Bw)'da detaylı anlatımları mevcuttur.
+* [Uzun süren işlemler](https://bilgiprog.github.io/jsders/byksay/byk.html) (Web Worker)
 * [Türkçe heceleme](https://bilgiprog.github.io/jsders/hecele.html) (Bootstrap form)
 * [Sayıyı yazıya çevirme](https://bilgiprog.github.io/jsders/sayiyaz.html) (basamak sayısı kısıtlaması olmayan algoritma, bootstrap form)
 * [Türk bayrağı çizimi](https://bilgiprog.github.io/jsders/bayrak.html) (SVG ile dinamik boyutlu)
