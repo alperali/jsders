@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+	<meta charset="iso-8859-1">
+</head>
 <body>
 <p>Geo Test</p>
-<p id="succ"></p><p id="err"></p>
+<p id="succ"></p><p id="err"></p><p><em id="err_msg"></em></p>
 
 <script>
 navigator.geolocation.getCurrentPosition(
@@ -12,9 +14,14 @@ navigator.geolocation.getCurrentPosition(
 	},
 	function(poserr) {
 		if (poserr.code == poserr.TIMEOUT) 
-			document.getElementById("err").innerHTML = "Error. Timeout.";
+			document.getElementById("err").innerHTML = "Error: Timeout.";
+		else if (poserr.code == poserr.POSITION_UNAVAILABLE)
+			document.getElementById("err").innerHTML = "Error: Position Unavailable.";
+		else if (poserr.code == poserr.PERMISSION_DENIED)
+			document.getElementById("err").innerHTML = "Error: Permission Denied.";
 		else
-			document.getElementById("err").innerHTML = "Error. Other.";
+			document.getElementById("err").innerHTML = "Error: Other.";
+		document.getElementById("err_msg").innerHTML = poserr.message;
 	},
 	{timeout: 4000});
 </script>
